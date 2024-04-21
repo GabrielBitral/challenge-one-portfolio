@@ -1,0 +1,269 @@
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 979px) {
+
+    /* Menu */
+    section.menu {
+        padding: 1% 5% 3% 5%;
+    }
+
+    ul.menu__list li:nth-child(-n + 5) {
+        display: none;
+    }
+
+    /*title*/
+    section.title {
+        padding: 3% 5%;
+    }
+
+    h2.title__bio {
+        font-size: 1.4rem;
+    }
+
+    h3.title__subsection {
+        font-size: 1rem;
+    }
+
+    div.title__div img.title__profile {
+        width: 146px;
+        height: 146px;
+    }
+
+    /* Sobre mim */
+
+    section.about {
+        padding: 3% 5%;
+    }
+
+    h3.about__title,
+    h3.skills__title,
+    h3.hobbies__title,
+    h2.experience__section__title,
+    h2.academic__title,
+    h2.formcontato__title {
+        font-size: 1.4rem;
+    }
+
+    p.about__paragraph {
+        font-size: .875rem;
+    }
+
+    /*Skills*/
+    section.skills {
+        padding: 3% 5%;
+    }
+
+    div.skills__line,
+    div.hobbies__line {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+
+    div.skills__line> :nth-child(7),
+    div.skills__line> :nth-child(8) div.hobbies__line> :nth-child(7),
+    div.hobbies__line> :nth-child(8) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    div.skills__box,
+    div.hobbies__box {
+        width: 100%;
+    }
+
+    /*Hobbies*/
+    section.hobbies {
+        padding: 3% 5%;
+    }
+
+    /*Experiências acadêmicas*/
+    section.academic {
+        padding: 3% 5%;
+    }
+
+    div.academic__courses {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    /*Expeirência profissional*/
+
+    section.experience {
+        padding: 5%;
+    }
+
+    div.experiencie__box {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
+    div.experiencie__box img {
+        width: 100%;
+    }
+
+    h2.experience__title {
+        font-size: 1rem;
+    }
+
+    h3.experience__text {
+        font-size: .875rem;
+    }
+
+    /* Contato */
+    section.formcontato {
+        padding: 3% 5%;
+    }
+
+    img.formcontato__img {
+        display: none;
+    }
+
+    input.formcontato__input, textarea.formcontato__textarea {
+        width: 110%;
+    }
+
+    button.formcontato__botao {
+        margin: 72px 0 0 30%;
+    }
+}
+
+/*Mobile*/
+@media (min-width: 425px) and (max-width: 768px) {
+
+    /* Menu */
+    section.menu {
+        padding: 1% 5% 3% 5%;
+    }
+
+    section.title div.title__div {
+        flex-direction: column;
+    }
+
+    ul.menu__list li:nth-child(-n + 5) {
+        display: none;
+    }
+
+    h3.menu__title {
+        font-size: 1rem;
+    }
+
+    /*title*/
+    section.title {
+        padding: 3% 5%;
+    }
+
+    h2.title__bio {
+        font-size: 1.4rem;
+    }
+
+    h3.title__subsection {
+        font-size: 1rem;
+    }
+
+    div.title__div img.title__profile {
+        width: 89px;
+        height: 89px;
+    }
+
+    /* Sobre mim */
+
+    section.about {
+        padding: 3% 5%;
+    }
+
+    h3.about__title,
+    h3.skills__title,
+    h3.hobbies__title,
+    h2.experience__section__title,
+    h2.academic__title,
+    h2.formcontato__title {
+        font-size: 1.4rem;
+    }
+
+    p.about__paragraph {
+        font-size: .875rem;
+    }
+
+    /*Skills*/
+    section.skills {
+        padding: 3% 5%;
+    }
+
+    div.skills__line,
+    div.hobbies__line {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+
+    div.skills__line> :nth-child(7),
+    div.skills__line> :nth-child(8) div.hobbies__line> :nth-child(7),
+    div.hobbies__line> :nth-child(8) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    div.skills__box,
+    div.hobbies__box {
+        width: 100%;
+    }
+
+    /*Hobbies*/
+    section.hobbies {
+        padding: 3% 5%;
+    }
+
+    /*Experiências acadêmicas*/
+    section.academic {
+        padding: 3% 5%;
+    }
+
+    div.academic__courses {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    /*Expeirência profissional*/
+
+    section.experience {
+        padding: 5%;
+    }
+
+    div.experiencie__box {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
+    div.experiencie__box img {
+        width: 100%;
+    }
+
+    h2.experience__title {
+        font-size: 1rem;
+    }
+
+    h3.experience__text {
+        font-size: .875rem;
+    }
+
+    /* Contato */
+    section.formcontato {
+        padding: 3% 5%;
+    }
+
+    img.formcontato__img {
+        display: none;
+    }
+
+    input.formcontato__input, textarea.formcontato__textarea {
+        width: 85%;
+    }
+
+    button.formcontato__botao {
+        margin: 72px 0 0 23%;
+    }
+}

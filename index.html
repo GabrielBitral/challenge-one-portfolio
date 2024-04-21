@@ -8,9 +8,11 @@
 
     <!-- Folha de estilo de CSS Linkado -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
     <!-- Fonte do Projeto Raleway -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
@@ -346,23 +348,27 @@
                     rápido possível. </h3>
                 <form class="formcontato__form">
                     <div class="form__item">
-                        <input class="formcontato__input" type="text" id="nome" required>
+                        <input class="formcontato__input" type="text" id="nome" required minlength="3" maxlength="50" onblur="validarNome()">
                         <div class="formcontato__text_input">Nome</div>
+                        <span class="span__erro"></span>
                     </div>
                     <div class="form__item">
-                        <input class="formcontato__input" type="email" id="email" required>
+                        <input class="formcontato__input" type="email" id="email" required onblur="validarEmail()">
                         <div class="formcontato__text_input">E-mail</div>
+                        <span class="span__erro"></span>
                     </div>
                     <div class="form__item">
-                        <input class="formcontato__input" type="text" id="assunto" required>
+                        <input class="formcontato__input" type="text" id="assunto" required onblur="validarAssunto()">
                         <div class="formcontato__text_input">Assunto</div>
+                        <span class="span__erro"></span>
                     </div>
                     <div class="form__item">
                         <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensagem"
-                            required></textarea>
+                            required maxlength="300" onblur="validarMensagem()"></textarea>
                         <div class="formcontato__text_input">Mensagem</div>
+                        <span class="span__erro"></span>
                     </div>
-                    <button class="formcontato__botao">Enviar mensagem</button>
+                    <button class="formcontato__botao" disabled>Enviar mensagem</button>
                 </form>
             </div>
         </div>

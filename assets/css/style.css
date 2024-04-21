@@ -6,6 +6,7 @@
     --cor-borda-botao: #135D66;
     --cor-de-fundo-box: #77b0aa;
     --cor-da-borda-e-letra: #E3FEF7;
+    --cor-erro: #f89999;
 }
 
 body {
@@ -37,6 +38,7 @@ button {
 section.menu {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1% 15% 3% 15%;
 }
 
@@ -74,7 +76,7 @@ section.title div.title__div {
 
 h2.title__bio {
     font-size: 3rem;
-    color: var(--cor-da-borda-e-letra)
+    color: var(--cor-da-borda-e-letra);
 }
 
 h3.title__subsection {
@@ -228,6 +230,7 @@ div.experiencie__box img {
     width: 70%;
     object-fit: contain;
     border-radius: 10px;
+    box-shadow: 1px 3px 15px var(--cor-borda-botao);
 }
 
 h3.experience__text {
@@ -296,7 +299,7 @@ h2.formcontato__title {
     text-align: start;
 }
 
-h3.formcontato__subtext{
+h3.formcontato__subtext {
     font-size: 1rem;
     margin: 2px 0;
     font-weight: 400;
@@ -307,7 +310,7 @@ form.formcontato__form {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
-    gap: 15px;
+    gap: 25px;
 }
 
 div.form__item {
@@ -319,7 +322,7 @@ div.form__item {
 
 input.formcontato__input {
     position: absolute;
-    width: 100%;
+    width: 139%;
     outline: none;
     padding: 0 30px;
     line-height: 40px;
@@ -338,7 +341,7 @@ input.formcontato__input:-internal-autofill-selected {
 
 textarea.formcontato__textarea {
     position: absolute;
-    width: 100%;
+    width: 139%;
     outline: none;
     padding: 10px 30px;
     line-height: 20px;
@@ -360,14 +363,16 @@ div.formcontato__text_input {
     background-color: var(--cor-borda-botao);
 }
 
-input.formcontato__input:focus, textarea.formcontato__textarea:focus {
+input.formcontato__input:focus,
+textarea.formcontato__textarea:focus {
     outline-color: var(--cor-da-borda-e-letra);
 }
 
-input.formcontato__input:focus + div.formcontato__text_input,
-input.formcontato__input:valid + div.formcontato__text_input, 
-textarea.formcontato__textarea:focus + div.formcontato__text_input,
-textarea.formcontato__textarea:valid + div.formcontato__text_input {
+input.formcontato__input:focus+div.formcontato__text_input,
+input.formcontato__input:valid+div.formcontato__text_input,
+input.formcontato__input.invalid+div.formcontato__text_input,
+textarea.formcontato__textarea:focus+div.formcontato__text_input,
+textarea.formcontato__textarea:valid+div.formcontato__text_input {
     height: 30px;
     line-height: 30px;
     padding: 0 12px;
@@ -387,9 +392,20 @@ button.formcontato__botao {
     transition: background-color .3s ease;
 }
 
-button.formcontato__botao:hover {
+button.formcontato__botao:active:hover {
     background-color: var(--cor-borda-botao);
     color: var(--cor-da-borda-e-letra);
+}
+
+span.span__erro {
+    display: none;
+    margin: 32px 0 3px 5px;
+    font-size: 12px;
+    color: var(--cor-erro);
+}
+
+textarea+div.formcontato__text_input+span.span__erro {
+    margin: 113px 0 3px 5px;
 }
 
 /*footeer*/
@@ -398,52 +414,10 @@ section.footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--cor-de-fundo-box );
+    background-color: var(--cor-de-fundo-box);
 }
 
 div.footer__rodape p {
     text-align: center;
 }
 
-/* Chegou a hora de se desafiar com a responsividade, 
-utilize como referência os breakpoints @media abaixo*/
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-    /* Menu */
-
-    /*title*/
-
-    /*Skills*/
-
-    /*Hobbies*/
-
-    /*Experiências acadêmicas*/
-
-    /*Expeirência profissional*/
-
-}
-
-/*Mobile*/
-@media (min-width: 425px) {
-
-    /*Menu*/
-
-    /*Titulo*/
-
-    /*Sessão sobre*/
-
-    /*Skills*/
-
-    /*Hobbies*/
-
-    /*Formação Acadêmica*/
-
-    /*Experiência Profissional*/
-
-    /*Contato*/
-
-    /*Footer*/
-
-}
