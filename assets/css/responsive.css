@@ -120,7 +120,8 @@
         display: none;
     }
 
-    input.formcontato__input, textarea.formcontato__textarea {
+    input.formcontato__input,
+    textarea.formcontato__textarea {
         width: 110%;
     }
 
@@ -259,7 +260,8 @@
         display: none;
     }
 
-    input.formcontato__input, textarea.formcontato__textarea {
+    input.formcontato__input,
+    textarea.formcontato__textarea {
         width: 85%;
     }
 

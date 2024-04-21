@@ -61,7 +61,7 @@ const validarNome = () => {
     if (inputs[0].value.length < 3) {
         mostrarErro(0, 'Nome deve ter no mínimo 3 caracteres');
     } else if (inputs[0].value.length > 50) {
-        mostrarErro(0, 'Nome muito grande, abrevie os sobrenomes');
+        mostrarErro(0, 'Nome maior que 50 caracteres, abrevie os sobrenomes');
     } else {
         removerErro(0);
     }
